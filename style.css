@@ -24,7 +24,7 @@ body{
 .main-header {
   background-color: #f7f7f7;
   padding:20px 40px;
-  margin-bottom: 50px;
+  /* margin-bottom: 60px; */
   /* height: 80px; */
 }
 
@@ -34,11 +34,11 @@ nav {
 }
 
 article{
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header{
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   /* position: relative; */
 }
 
@@ -310,7 +310,9 @@ footer{
   font-style: italic;
 }
 
-.row{
+
+/*FLEXBOX LAYOUT */
+/* .row{
   display:flex;
   align-items: flex-start;
   gap: 75px;
@@ -323,5 +325,37 @@ article{
 }
 
 aside{
+
+  DEFAULTS:
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+
   flex: 0 0 300px;
+} */
+
+/* CSS GRID LAYOUT */
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  row-gap: 60px;
+  column-gap: 75px;
+  align-items: start;
+}
+
+.main-header{
+  grid-column: 1 / -1;
+}
+
+article{
+
+}
+
+aside{
+  
+}
+
+footer{
+  grid-column: 1 / -1;
 }
